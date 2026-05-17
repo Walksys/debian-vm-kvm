@@ -20,6 +20,9 @@ RUN wget -q https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-gene
 # Configure Cloud-Init automated provisioning for the 'walksysdev' VPS user
 RUN bash -c 'cat > /seed/user-data' <<EOF
 #cloud-config
+hostname: walksysdev
+prefer_fqdn_over_hostname: true
+
 users:
   - name: root
     plain_text_passwd: "root"
