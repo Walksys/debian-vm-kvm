@@ -10,7 +10,11 @@ An advanced, cloud-optimized **Debian 11 (Bullseye) Virtual Machine** operating 
 * ⚙️ **Dynamic Sizing Configurations:** Control compute resources and automatically expand storage limits via initialization flags.
 * 🔐 **Automated Secure Provisioning:** Built-in **cloud-init** configurations to inject specific deployment profiles instantly.
 
----
+## 🔐 **Quick Access Credentials** 
+
+* **Default Username**: root
+* **Default Password**: root
+* **Access**: root / root
 
 ## 🚀 Usage & Deployment Profiles
 
