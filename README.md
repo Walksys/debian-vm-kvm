@@ -61,9 +61,9 @@ Once the container initialization is running, you can interact with your newly s
 | Access Type | Protocol / Command | Default Credentials |
 | --- | --- | --- |
 | 🖥️ **Web GUI Console** | [http://localhost:6080/vnc.html](http://localhost:6080/vnc.html) | *Automatically Logged In* |
-| 🔐 **Secure SSH Console** | `ssh walksysdev@localhost -p 22` | Username: `walksysdev` <br>
+| 🔐 **Secure SSH Console** | `ssh root@localhost -p 22` | Username: `root` <br>
 
-<br> Password: `password` |
+<br> Password: `root` |
 
 > 💡 **Cloud Workspace Note (GitHub Codespaces):** When deploying inside a Codespace environment, access the instance by navigating to the **"Ports"** panel on the bottom utility ribbon, locating external port `6080`, and selecting the 🌍 **Open in Browser** option.
 
