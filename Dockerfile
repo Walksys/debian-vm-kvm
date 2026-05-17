@@ -17,7 +17,7 @@ RUN apt-get update && \
 RUN wget -q https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-generic-amd64.qcow2 -O /debian-base.qcow2
 
 # Create working directories (Make sure to add this line before the cloud-config step)
-RUN mkdir -p /data /seed
+RUN mkdir -p /data /seed /seed/meta-data /seed/user-data
 
 # Configure Cloud-Init automated provisioning for the 'walksysdev' VPS user
 RUN bash -c 'cat > /seed/user-data' <<EOF
