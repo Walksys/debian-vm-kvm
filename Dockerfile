@@ -22,7 +22,7 @@ RUN mkdir -p /seed
 RUN bash -c 'cat > /seed/user-data' <<EOF
 #cloud-config
 users:
-  - name: walksysdev
+  - name: root
     plain_text_passwd: "password"
     lock_passwd: false
     shell: /bin/bash
@@ -47,7 +47,7 @@ VM_CORES="${CORES:-2}"\n\
 VM_DISK_SIZE="${DISK_SIZE:-20G}"\n\
 \n\
 echo "⚙️ Provisioning Virtual Private Server..."\n\
-echo "   -> Target User   : walksysdev"\n\
+echo "   -> Target User   : root"\n\
 echo "   -> Disk Name     : walksysdev.qcow2 | Provisioned Capacity=${VM_DISK_SIZE}"\n\
 echo "   -> Virtual Specs : Allocation=${VM_RAM} RAM | Compute=${VM_CORES} CPU Cores"\n\
 \n\
@@ -75,7 +75,7 @@ websockify --web /usr/share/novnc/ 6080 localhost:5900 &\n\
 echo "========================================================================="\n\
 echo " ✅ VPS Virtual Cloud Engine is Active!"\n\
 echo " 🌐 Remote Web VNC Access : http://localhost:6080/vnc.html"\n\
-echo " 🔐 Direct SSH Network     : ssh walksysdev@localhost -p 2222 (Pass: password)"\n\
+echo " 🔐 Direct SSH Network     : ssh root@localhost -p 2222 (Pass: password)"\n\
 echo "========================================================================="\n\
 tail -f /dev/null\n' > /start-vps.sh && chmod +x /start-vps.sh
 
