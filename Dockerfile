@@ -17,7 +17,10 @@ RUN apt-get update && \
 # Download the Official Debian 11 Cloud qcow2 Image directly as our master template
 RUN wget -q https://cloud.debian.org/images/cloud/bullseye/latest/debian-11-generic-amd64.qcow2 -O /debian-base.qcow2
 
-# Cloud-init user-data config to set root credentials
+# Create working directories (Make sure to add this line before the cloud-config step)
+RUN mkdir -p /data /seed
+
+# Configure Cloud-Init automated provisioning for the 'walksysdev' VPS user
 RUN bash -c 'cat > /seed/user-data' <<EOF
 #cloud-config
 users:
