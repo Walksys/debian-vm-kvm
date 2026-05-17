@@ -24,7 +24,7 @@ Fire up your Virtual Private Server (VPS) by passing your desired hardware capac
 
 ```bash
 docker run -it \
-  -p 2222:2222 \
+  -p 2026:2026 \
   -e RAM=4G \
   -e CORES=2 \
   -e DISK_SIZE=25G \
@@ -36,7 +36,7 @@ docker run -it \
 
 ```bash
 docker run -it \
-  -p 2222:2222 \
+  -p 2026:2026 \
   -e RAM=8G \
   -e CORES=4 \
   -e DISK_SIZE=50G \
@@ -47,7 +47,7 @@ docker run -it \
 ### 📦 Fallback Standard Mode (Defaults: 4GB RAM, 2 Cores, 20GB Storage Disk)
 
 ```bash
-docker run -it -p 2222:2222 walksysdev/debian-vm-kvm
+docker run -it -p 2026:2026 walksysdev/debian-vm-kvm
 
 ```
 
@@ -58,7 +58,7 @@ Once the container initialization is running, you can interact with your newly s
 
 | Access Type | Protocol / Command | Default Credentials |
 | --- | --- | --- |
-| 🔐 **Secure SSH Console** | `ssh root@localhost -p 22` | Username: `root` <br>
+| 🔐 **Secure SSH Console** | `ssh root@localhost -p 2026` | Username: `root` <br>
 
 <br> Password: `root` |
 
