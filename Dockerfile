@@ -3,15 +3,16 @@ FROM debian:11
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install core cloud virtualization and web-access dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     qemu-system-x86 \
     qemu-utils \
-    wget \
-    python3 \
+    cloud-image-utils \
     novnc \
     websockify \
-    cloud-image-utils \
+    wget \
+    unzip \
+    net-tools \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Download the Official Debian 11 Cloud qcow2 Image directly as our master template
