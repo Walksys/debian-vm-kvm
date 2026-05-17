@@ -59,7 +59,7 @@ fi\n\
 echo "🚀 Booting Debian CLI VM via QEMU..."\n\
 echo "========================================================================="\n\
 echo " ✅ VPS Virtual Cloud Engine is Active!"\n\
-echo " 🔐 Direct SSH Network : ssh rootv@localhost -p 2222 (Pass: password)"\n\
+echo " 🔐 Direct SSH Network : ssh rootv@localhost -p 2026 (Pass: password)"\n\
 echo "========================================================================="\n\
 \n\
 # Boot the Qemu VM with VNC totally disabled (-vnc none)\n\
@@ -69,11 +69,11 @@ qemu-system-x86_64 \\\n\
     -m "${VM_RAM}" \\\n\
     -smp "${VM_CORES}" \\\n\
     -device virtio-net,netdev=net0 \\\n\
-    -netdev user,id=net0,hostfwd=tcp::2222-:22 \\\n\
+    -netdev user,id=net0,hostfwd=tcp::2026-:22 \\\n\
     -vnc none \\\n\
     -nographic\n' > /start-vps.sh && chmod +x /start-vps.sh
 
 # Only expose SSH networking port now
-EXPOSE 2222
+EXPOSE 2026
 
 CMD ["/start-vps.sh"]
