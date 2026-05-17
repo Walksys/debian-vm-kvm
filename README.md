@@ -21,7 +21,7 @@ Fire up your Virtual Private Server (VPS) by passing your desired hardware capac
 ```bash
 docker run -it \
   -p 6080:6080 \
-  -p 2222:2222 \
+  -p 22:22 \
   -e RAM=4G \
   -e CORES=2 \
   -e DISK_SIZE=25G \
@@ -34,7 +34,7 @@ docker run -it \
 ```bash
 docker run -it \
   -p 6080:6080 \
-  -p 2222:2222 \
+  -p 22:22 \
   -e RAM=8G \
   -e CORES=4 \
   -e DISK_SIZE=50G \
@@ -45,7 +45,7 @@ docker run -it \
 ### 📦 Fallback Standard Mode (Defaults: 4GB RAM, 2 Cores, 20GB Storage Disk)
 
 ```bash
-docker run -it -p 6080:6080 -p 2222:2222 walksysdev/debian-vm-kvm
+docker run -it -p 6080:6080 -p 22:22 walksysdev/debian-vm-kvm
 
 ```
 
@@ -57,7 +57,7 @@ Once the container initialization is running, you can interact with your newly s
 | Access Type | Protocol / Command | Default Credentials |
 | --- | --- | --- |
 | 🖥️ **Web GUI Console** | [http://localhost:6080/vnc.html](http://localhost:6080/vnc.html) | *Automatically Logged In* |
-| 🔐 **Secure SSH Console** | `ssh walksysdev@localhost -p 2222` | Username: `walksysdev` <br>
+| 🔐 **Secure SSH Console** | `ssh walksysdev@localhost -p 22` | Username: `walksysdev` <br>
 
 <br> Password: `password` |
 
