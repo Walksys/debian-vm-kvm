@@ -29,7 +29,6 @@ docker run -it \
   -e CORES=2 \
   -e DISK_SIZE=25G \
   walksysdev/debian-vm-kvm
-
 ```
 
 ### 💻 Performance Profile (8GB RAM, 4 CPU Cores, 50GB Storage Disk)
@@ -41,14 +40,12 @@ docker run -it \
   -e CORES=4 \
   -e DISK_SIZE=50G \
   walksysdev/debian-vm-kvm
-
 ```
 
 ### 📦 Fallback Standard Mode (Defaults: 4GB RAM, 2 Cores, 20GB Storage Disk)
 
 ```bash
 docker run -it -p 2026:2026 walksysdev/debian-vm-kvm
-
 ```
 
 
@@ -71,14 +68,12 @@ If you want to pull down the source configurations or compile the container manu
 
 ```bash
 docker pull walksysdev/debian-vm-kvm:latest
-
 ```
 
 ### Manual Compilation Pipeline
 
 ```bash
 docker build -t walksysdev/debian-vm-kvm .
-
 ```
 
 
